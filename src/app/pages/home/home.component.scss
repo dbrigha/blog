@@ -1,0 +1,31 @@
+:host {
+  display: grid;
+  grid-template:
+    [row1-start] ". header ." 15rem [row1-end]
+    [row2-start] ". main ." 20rem [row2-end]
+    / auto 40rem auto;
+  .banner {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    &__title {
+      font-size: 2rem;
+    }
+    &__subtitle {
+      font-size: 1rem;
+      line-height: 0rem;
+      color: #666;
+    }
+    &__skills {
+      color: #666;
+    }
+  }
+  .body {
+    grid-area: main;
+    & mat-card {
+      height: 100%;
+    }
+  }
+}

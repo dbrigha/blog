@@ -1,0 +1,22 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+$typography-theme: mat.define-typography-config(
+  $font-family: "Open Sans",
+);
+$portfolio-primary: mat.define-palette(mat.$indigo-palette);
+$portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$portfolio-warn: mat.define-palette(mat.$red-palette);
+
+$portfolio-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $portfolio-primary,
+      accent: $portfolio-accent,
+      warn: $portfolio-warn,
+    ),
+  )
+);
+@include mat.core($typography-theme);
+@include mat.all-component-themes($portfolio-theme);
