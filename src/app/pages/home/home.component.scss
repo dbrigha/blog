@@ -1,9 +1,17 @@
 :host {
   display: grid;
   grid-template:
-    [row1-start] ". header ." 15rem [row1-end]
-    [row2-start] ". main ." 20rem [row2-end]
+    [row1-start] ". header ." 10rem [row1-end]
+    [row2-start] ". main ." auto [row2-end]
     / auto 40rem auto;
+  row-gap: 1rem;
+  @media screen and (max-width: 800px) {
+    grid-template:
+      [row1-start] ". header ." 10rem [row1-end]
+      [row2-start] ". main ." auto [row2-end]
+      / 0.5rem 1fr 0.5rem;
+    row-gap: 0.5rem;
+  }
   .banner {
     grid-area: header;
     display: flex;
@@ -22,10 +30,20 @@
       color: #666;
     }
   }
+  // .image {
+  //   grid-area: row2-start / 2 / row2-end / 3;
+  //   &__src {
+  //     width: 100%;
+  //   }
+  // }
   .body {
-    grid-area: main;
-    & mat-card {
-      height: 100%;
+    grid-area: row2-start / 2 / row2-end / 3;
+    & .card {
+      &__image {
+        &__src {
+          width: 100%;
+        }
+      }
     }
   }
 }

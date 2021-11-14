@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  blogImage = '../../../assets/images/blog_image.jpg';
+  blogPostImage = '../../../assets/images/you_are_here.jpg';
   constructor() { }
 
   ngOnInit(): void {
