@@ -10,8 +10,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  blogImage = 'assets/images/blog_image.jpg';
-  blogPostImage = 'assets/images/you_are_here.jpg';
+  blogImage = '/assets/images/blog_image.jpg';
+  blogPostImage = '/assets/images/you_are_here.jpg';
   githubIcon = "/assets/icons/GitHub-Mark-64px.png";
   linkedinIcon = "/assets/icons/In-Blue-72.png";
   githubLink = environment.github;
