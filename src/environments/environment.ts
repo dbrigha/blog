@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:5000/api'
+  api: 'http://localhost:5000/api',
+  github: 'https://github.com/dbrigha',
+  linkedin: 'https://linkedin.com/in/dbrigha'
 };
 
 /*

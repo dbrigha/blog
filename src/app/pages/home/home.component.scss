@@ -29,13 +29,11 @@
     &__skills {
       color: #666;
     }
+    &__divider {
+      margin-top: 1rem;
+      width: 100%;
+    }
   }
-  // .image {
-  //   grid-area: row2-start / 2 / row2-end / 3;
-  //   &__src {
-  //     width: 100%;
-  //   }
-  // }
   .body {
     grid-area: row2-start / 2 / row2-end / 3;
     & .card {
@@ -45,5 +43,8 @@
         }
       }
     }
+  }
+  .icon {
+    height: 75%;
   }
 }

@@ -4,6 +4,27 @@
   <p class="banner__skills">
     Angular | Azure | .NET Core | SQL | DevOps | CI/CD
   </p>
+  <div class="banner__links">
+    <a
+      class="link__item"
+      [href]="linkedinLink"
+      routerLinkActive="active"
+      target="_blank"
+      mat-icon-button
+    >
+      <img class="icon" [src]="linkedinIcon" />
+    </a>
+    <a
+      class="link__item"
+      [href]="githubLink"
+      routerLinkActive="active"
+      target="_blank"
+      mat-icon-button
+    >
+      <img class="icon" [src]="githubIcon" />
+    </a>
+  </div>
+  <mat-divider class="banner__divider"></mat-divider>
 </div>
 <div class="body">
   <ng-container *ngIf="posts$ | async as posts">

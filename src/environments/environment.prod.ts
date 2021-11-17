@@ -1,4 +1,6 @@
 export const environment = {
   production: true,
-  api: 'http://localhost:5000/api'
+  api: 'https://dev-blogapi-app.azurewebsites.net/api',
+  github: 'https://github.com/dbrigha',
+  linkedin: 'https://linkedin.com/in/dbrigha'
 };
