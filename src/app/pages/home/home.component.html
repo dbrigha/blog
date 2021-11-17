@@ -1,36 +1,38 @@
-<div class="banner">
-  <h3 class="banner__title">Dylan Brigham</h3>
-  <h6 class="banner__subtitle">Software Developer</h6>
-  <p class="banner__skills">
-    Angular | Azure | .NET Core | SQL | DevOps | CI/CD
-  </p>
-  <div class="banner__links">
-    <a
-      class="link__item"
-      [href]="linkedinLink"
-      routerLinkActive="active"
-      target="_blank"
-      mat-icon-button
-    >
-      <img class="icon" [src]="linkedinIcon" />
-    </a>
-    <a
-      class="link__item"
-      [href]="githubLink"
-      routerLinkActive="active"
-      target="_blank"
-      mat-icon-button
-    >
-      <img class="icon" [src]="githubIcon" />
-    </a>
-  </div>
-  <mat-divider class="banner__divider"></mat-divider>
+<div class="sidenav">
+  <mat-card class="banner">
+    <h3 class="banner__title">Dylan Brigham</h3>
+    <h6 class="banner__subtitle">Software Developer</h6>
+    <p class="banner__skills">
+      Angular | Azure | .NET Core | SQL | DevOps | CI/CD
+    </p>
+    <div class="banner__links">
+      <a
+        class="link__item"
+        [href]="linkedinLink"
+        routerLinkActive="active"
+        target="_blank"
+        mat-icon-button
+      >
+        <img class="icon" [src]="linkedinIcon" />
+      </a>
+      <a
+        class="link__item"
+        [href]="githubLink"
+        routerLinkActive="active"
+        target="_blank"
+        mat-icon-button
+      >
+        <img class="icon" [src]="githubIcon" />
+      </a>
+    </div>
+  </mat-card>
 </div>
+
 <div class="body">
   <ng-container *ngIf="posts$ | async as posts">
     <ng-container *ngFor="let post of posts">
       <mat-card class="card">
-        <mat-card-title>{{ post.title }}</mat-card-title>
+        <mat-card-title class="card__title">{{ post.title }}</mat-card-title>
         <mat-card-subtitle>{{ post.subtitle }}</mat-card-subtitle>
         <div class="card__image">
           <img class="card__image__src" [src]="blogPostImage" />
