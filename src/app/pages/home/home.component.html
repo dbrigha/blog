@@ -1,7 +1,7 @@
 <div class="sidenav">
   <mat-card class="banner">
-    <h3 class="banner__title">Dylan Brigham</h3>
-    <h6 class="banner__subtitle">Software Developer</h6>
+    <p class="banner__title">Dylan Brigham</p>
+    <p class="banner__subtitle">Software Developer</p>
     <p class="banner__skills">
       Angular | Azure | .NET Core | SQL | DevOps | CI/CD
     </p>
@@ -9,8 +9,10 @@
       <a
         class="link__item"
         [href]="linkedinLink"
+        rel="noreferrer"
         routerLinkActive="active"
         target="_blank"
+        alt="linkedin link"
         mat-icon-button
       >
         <img class="icon" [src]="linkedinIcon" />
@@ -18,8 +20,10 @@
       <a
         class="link__item"
         [href]="githubLink"
+        rel="noreferrer"
         routerLinkActive="active"
         target="_blank"
+        alt="github link"
         mat-icon-button
       >
         <img class="icon" [src]="githubIcon" />
@@ -35,7 +39,11 @@
         <mat-card-title class="card__title">{{ post.title }}</mat-card-title>
         <mat-card-subtitle>{{ post.subtitle }}</mat-card-subtitle>
         <div class="card__image">
-          <img class="card__image__src" [src]="blogPostImage" />
+          <img
+            alt="blog post image"
+            class="card__image__src"
+            [src]="blogPostImage"
+          />
         </div>
         <mat-card-content [innerHtml]="post.content"> </mat-card-content>
       </mat-card>
