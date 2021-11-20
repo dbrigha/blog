@@ -10,3 +10,12 @@ body {
 .spacer {
   flex: 1 1 auto;
 }
+pre {
+  border: 1px solid #f1f1f1;
+  border-radius: 3px;
+  background: #f1f1f1;
+  padding: 0.5rem 1rem;
+  white-space: break-spaces;
+}
+code {
+}
