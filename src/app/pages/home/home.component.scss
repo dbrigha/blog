@@ -56,16 +56,6 @@
     @media screen and (max-width: 800px) {
       grid-area: row2-start / 3 / row4-end / 4;
     }
-    & .card {
-      &__title {
-        font-size: 1.5rem;
-      }
-      &__image {
-        &__src {
-          width: 100%;
-        }
-      }
-    }
   }
   .icon {
     height: 75%;

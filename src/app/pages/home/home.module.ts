@@ -7,10 +7,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
+    BodyComponent,
   ],
   imports: [
     CommonModule,

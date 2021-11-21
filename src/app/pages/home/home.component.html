@@ -12,10 +12,9 @@
         rel="noreferrer"
         routerLinkActive="active"
         target="_blank"
-        alt="linkedin link"
         mat-icon-button
       >
-        <img class="icon" [src]="linkedinIcon" />
+        <img class="icon" alt="linkedin link" [src]="linkedinIcon" />
       </a>
       <a
         class="link__item"
@@ -23,10 +22,9 @@
         rel="noreferrer"
         routerLinkActive="active"
         target="_blank"
-        alt="github link"
         mat-icon-button
       >
-        <img class="icon" [src]="githubIcon" />
+        <img class="icon" alt="github link" [src]="githubIcon" />
       </a>
     </div>
   </mat-card>
@@ -34,19 +32,6 @@
 
 <div class="body">
   <ng-container *ngIf="posts$ | async as posts">
-    <ng-container *ngFor="let post of posts">
-      <mat-card class="card">
-        <mat-card-title class="card__title">{{ post.title }}</mat-card-title>
-        <mat-card-subtitle>{{ post.subtitle }}</mat-card-subtitle>
-        <div class="card__image">
-          <img
-            alt="blog post image"
-            class="card__image__src"
-            [src]="blogPostImage"
-          />
-        </div>
-        <mat-card-content [innerHtml]="post.content"> </mat-card-content>
-      </mat-card>
-    </ng-container>
+    <app-body [posts]="posts"></app-body>
   </ng-container>
 </div>
