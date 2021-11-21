@@ -8,13 +8,12 @@ import { Post } from '../models/post';
   providedIn: 'root'
 })
 export class BlogService {
-  apiURL = environment.api;
   constructor(
     private http: HttpClient
   ) { }
 
   get posts$(): Observable<Post[] | null> {
-    return this.http.get<Post[]>(`${this.apiURL}/blog/v2/posts`)
+    return this.http.get<Post[]>(`/api/posts`)
       .pipe(catchError(() => of(null)))
   }
 }
