@@ -1,0 +1,29 @@
+<mat-card class="banner">
+  <p class="banner__title">Dylan Brigham</p>
+  <p class="banner__subtitle">Software Developer</p>
+  <p class="banner__skills">
+    Angular | Azure | .NET Core | SQL | DevOps | CI/CD
+  </p>
+  <div class="banner__links">
+    <a
+      class="link__item"
+      [href]="linkedinLink"
+      rel="noreferrer"
+      routerLinkActive="active"
+      target="_blank"
+      mat-icon-button
+    >
+      <img class="icon" alt="linkedin link" [src]="linkedinIcon" />
+    </a>
+    <a
+      class="link__item"
+      [href]="githubLink"
+      rel="noreferrer"
+      routerLinkActive="active"
+      target="_blank"
+      mat-icon-button
+    >
+      <img class="icon" alt="github link" [src]="githubIcon" />
+    </a>
+  </div>
+</mat-card>

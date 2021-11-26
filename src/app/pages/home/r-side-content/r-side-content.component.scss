@@ -1,0 +1,9 @@
+:host {
+  .joke {
+    padding: 2rem;
+    &__link {
+      text-decoration: none;
+      color: unset;
+    }
+  }
+}

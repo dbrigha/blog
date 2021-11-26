@@ -1,0 +1,23 @@
+<mat-card class="joke">
+  <mat-card-title>Joke of the Day</mat-card-title>
+  <mat-card-subtitle
+    >Powered by
+    <strong>
+      <a
+        class="joke__link"
+        href="https://jokes.one/"
+        alt="jokes.one api"
+        target="_blank"
+        >jokes.one</a
+      >
+    </strong></mat-card-subtitle
+  >
+  <mat-card-content>
+    <p *ngIf="jokeOfTheDay$ | async as jokeOfTheDay; else noJoke">
+      {{ jokeOfTheDay.contents.jokes[0].joke.text }}
+    </p>
+    <ng-template #noJoke>
+      <p>-</p>
+    </ng-template>
+  </mat-card-content>
+</mat-card>

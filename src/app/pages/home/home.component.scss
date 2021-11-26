@@ -1,66 +1,66 @@
 :host {
   margin-top: 1rem;
   display: grid;
-  grid-template:
-    [row1-start] ". sidenav header . ." 10rem [row1-end]
+  grid:
+    [row1-start] ". sidenav header . ." auto [row1-end]
     [row2-start] ". sidenav main . ." auto [row2-end]
     [row3-start] ". sidenav main . ." auto [row3-end]
     / auto 15rem 30rem 15rem auto;
   row-gap: 1rem;
   column-gap: 1rem;
+  @media screen and (max-width: 1030px) {
+    grid-template-columns: auto 15rem 30rem auto auto;
+  }
   @media screen and (max-width: 800px) {
     grid-template-columns: auto 5rem 1fr 5rem auto;
-    row-gap: 0rem;
+    margin-top: 0.5rem;
+    row-gap: 0.5rem;
     column-gap: 0rem;
   }
   @media screen and (max-width: 600px) {
     grid-template-columns: auto 1rem 1fr 1rem auto;
+    margin-top: 0.5rem;
+    row-gap: 0.5rem;
     column-gap: 0rem;
-    row-gap: 0rem;
   }
   @media screen and (max-width: 500px) {
-    margin-top: 0.25rem;
     grid-template-columns: auto auto 1fr auto auto;
+    margin-top: 0.5rem;
+    row-gap: 0.5rem;
     column-gap: 0rem;
-    row-gap: 0rem;
   }
-  .sidenav {
-    grid-area: sidenav;
-    @media screen and (max-width: 800px) {
-      grid-area: row1-start / 3 / row3-end / 4;
-    }
-  }
-  .banner {
+  .left-sidenav {
     position: sticky;
     top: 4.5rem;
+    grid-area: row1-start / 2 / row1-end / 3;
     @media screen and (max-width: 800px) {
-      position: relative;
+      position: unset;
       top: unset;
+      grid-area: row1-start / 3 / row1-end / 4;
     }
-    &__title {
-      font-size: 1.25rem;
+  }
+  .right-sidenav {
+    position: sticky;
+    top: 4.5rem;
+    grid-area: row1-start / 4 / row2-end / 5;
+    @media screen and (max-width: 1030px) {
+      position: unset;
+      top: unset;
+      grid-area: row1-start / 3 / row1-end / 4;
     }
-    &__subtitle {
-      font-size: 0.8rem;
-      line-height: 0rem;
-      color: #666;
-    }
-    &__skills {
-      font-size: 0.8rem;
-      color: #666;
-    }
-    &__divider {
-      margin-top: 1rem;
-      width: 100%;
+    @media screen and (max-width: 800px) {
+      position: unset;
+      top: unset;
+      grid-area: row2-start / 3 / row2-end / 4;
     }
   }
   .body {
-    grid-area: row1-start / 3 / row3-end / 4;
-    @media screen and (max-width: 800px) {
+    grid-area: row1-start / 3 / row4-end / 4;
+    @media screen and (max-width: 1030px) {
       grid-area: row2-start / 3 / row4-end / 4;
     }
-    @media screen and (max-width: 500px) {
-      margin-top: -0.5rem;
+    @media screen and (max-width: 800px) {
+      grid-area: row3-start / 3 / row4-end / 4;
     }
   }
   .icon {
