@@ -10,16 +10,19 @@
   column-gap: 1rem;
   @media screen and (max-width: 800px) {
     grid-template-columns: auto 5rem 1fr 5rem auto;
-    row-gap: 0.5rem;
+    row-gap: 0rem;
     column-gap: 0rem;
   }
   @media screen and (max-width: 600px) {
     grid-template-columns: auto 1rem 1fr 1rem auto;
     column-gap: 0rem;
+    row-gap: 0rem;
   }
   @media screen and (max-width: 500px) {
+    margin-top: 0.25rem;
     grid-template-columns: auto auto 1fr auto auto;
     column-gap: 0rem;
+    row-gap: 0rem;
   }
   .sidenav {
     grid-area: sidenav;
@@ -55,6 +58,9 @@
     grid-area: row1-start / 3 / row3-end / 4;
     @media screen and (max-width: 800px) {
       grid-area: row2-start / 3 / row4-end / 4;
+    }
+    @media screen and (max-width: 500px) {
+      margin-top: -0.5rem;
     }
   }
   .icon {
