@@ -5,10 +5,10 @@
     [row1-start] ". sidenav header . ." auto [row1-end]
     [row2-start] ". sidenav main . ." auto [row2-end]
     [row3-start] ". sidenav main . ." auto [row3-end]
-    / auto 15rem 30rem 15rem auto;
+    / auto 20rem 35rem 20rem auto;
   row-gap: 1rem;
   column-gap: 1rem;
-  @media screen and (max-width: 1030px) {
+  @media screen and (max-width: 1300px) {
     grid-template-columns: auto 15rem 30rem auto auto;
   }
   @media screen and (max-width: 800px) {
@@ -43,7 +43,7 @@
     position: sticky;
     top: 4.5rem;
     grid-area: row1-start / 4 / row2-end / 5;
-    @media screen and (max-width: 1030px) {
+    @media screen and (max-width: 1300px) {
       position: unset;
       top: unset;
       grid-area: row1-start / 3 / row1-end / 4;
@@ -56,7 +56,7 @@
   }
   .body {
     grid-area: row1-start / 3 / row4-end / 4;
-    @media screen and (max-width: 1030px) {
+    @media screen and (max-width: 1300px) {
       grid-area: row2-start / 3 / row4-end / 4;
     }
     @media screen and (max-width: 800px) {

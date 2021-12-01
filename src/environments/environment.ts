@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   apiUrl: 'http://localhost:5000',
   github: 'https://github.com/dbrigha',
-  linkedin: 'https://linkedin.com/in/dbrigha'
+  linkedin: 'https://linkedin.com/in/dbrigha',
+  jokeoneURL: 'assets/mockdata/jod.json'
 };
 
 /*
