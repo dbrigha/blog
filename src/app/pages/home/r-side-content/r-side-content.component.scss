@@ -1,5 +1,8 @@
 :host {
+  height: 100%;
+  display: flex;
   .joke {
+    width: 100%;
     padding: 2rem;
     &__link {
       text-decoration: none;

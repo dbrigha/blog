@@ -1,5 +1,8 @@
 :host {
+  height: 100%;
+  display: flex;
   .banner {
+    width: 100%;
     @media screen and (max-width: 800px) {
       position: relative;
       top: unset;
