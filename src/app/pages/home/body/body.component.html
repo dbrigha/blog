@@ -3,14 +3,7 @@
     <mat-card class="card">
       <mat-card-title class="card__title">{{ post.title }}</mat-card-title>
       <mat-card-subtitle>{{ post.subtitle }}</mat-card-subtitle>
-      <div class="card__image">
-        <img
-          alt="blog post image"
-          class="card__image__src"
-          [src]="blogPostImage"
-        />
-      </div>
-      <mat-card-content [innerHtml]="post.content"> </mat-card-content>
+      <mat-card-content class="content" [innerHtml]="post.content"> </mat-card-content>
     </mat-card>
   </ng-container>
 </ng-container>
